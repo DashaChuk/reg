@@ -31,11 +31,16 @@
     <c:url value="/j_spring_security_check" var="loginUrl" />
     <form action="${loginUrl}" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="form-control" name="j_username" placeholder="Email address" required autofocus value="colibri">
-        <input type="password" class="form-control" name="j_password" placeholder="Password" required value="1234">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
-    </form>
+        <input type="text" class="form-control" name="j_username" placeholder="Email address" required autofocus value="">
+        <input type="password" class="form-control" name="j_password" placeholder="Password" required value="">
+        <div class="row">
+            <div class="col-xs-6">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </div>
+      <div class="col-xs-6"><a href="javascript:void(0)" onclick="location.href='"/" + document.getElementById("j_username").text + "/" + document.getElementById("j_password").text " class="btn btn-lg btn-primary btn-block" type="submit"><button>Sign up</button></a</div>
+
+        </div>    </form>
 </div>
 
 </body>
-</html>
+</html>>
