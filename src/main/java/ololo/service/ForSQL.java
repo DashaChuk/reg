@@ -21,7 +21,7 @@ public class ForSQL {
         }
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/kurs", "root", "root");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/reg", "root", "root");
             statement = connection.createStatement();
 
         } catch (Exception o) {
