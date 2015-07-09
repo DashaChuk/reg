@@ -31,22 +31,28 @@
 <div class="container">
 
 <div class="jumbotron" style="margin-top: 20px;">
-<h1>Devcolibri.com</h1>
-<p class="lead">
-Devcolibri - это сервис предоставляющий всем желающим возможность обучаться программированию.
-</p>
+
+
 <sec:authorize access="!isAuthenticated()">
-<p><a class="btn btn-lg btn-success" href="<c:url value="/login" />" role="button">Войти</a></p>
+    <p class="lead">
+    На этой странице ты можешь войти в систему или зарегистрироваться
+</p>
+<p><a class="btn btn-lg btn-success" href="<c:url value="/login" />" role="button">Sign In</a></p>
+    <p><a class="btn btn-lg btn-success" href="<c:url value="/logup" />" role="button">Sign Up</a></p>
+
 </sec:authorize>
 <sec:authorize access="isAuthenticated()">
+    <p class="lead">
+        У тебя получилось!
+    </p>
 <p>Ваш логин: <sec:authentication property="principal.username" /></p>
-<p><a class="btn btn-lg btn-danger" href="<c:url value="/logout" />" role="button">Выйти</a></p>
+<p><a class="btn btn-lg btn-danger" href="<c:url value="/logout" />" role="button">Sign out</a></p>
 
 </sec:authorize>
 </div>
 
 <div class="footer">
-<p>© Devcolibri 2014</p>
+
 </div>
 
 </div>

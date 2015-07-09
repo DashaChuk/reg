@@ -14,7 +14,6 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.devcolibri")
 public class WebAppConfig extends WebMvcConfigurerAdapter {
 
     @Override

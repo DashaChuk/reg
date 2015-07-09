@@ -35,7 +35,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         // указываем правила запросов
                         // по которым будет определятся доступ к ресурсам и остальным данным
                 .authorizeRequests()
-                .antMatchers("/resources/**", "/**").permitAll()
+        //        .antMatchers("/resources/**", "/**").permitAll()
+                .antMatchers("/*", "/favicon.ico", "/resources/**", "/logup").permitAll()
+
                 .anyRequest().permitAll()
                 .and();
 
@@ -51,8 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordParameter("j_password")
                         // даем доступ к форме логина всем
                 .permitAll();
-
-        http.logout()
+         http.logout()
                 // разрешаем делать логаут всем
                 .permitAll()
                         // указываем URL логаута
