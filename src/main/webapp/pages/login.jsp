@@ -34,10 +34,8 @@
         <input type="text" class="form-control" name="j_username" placeholder="Email address" required autofocus value="">
         <input type="password" class="form-control" name="j_password" placeholder="Password" required value="">
         <div class="row">
-         <button href="" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-
-
-
+            <div class=><button href="" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </div>
         </div>    </form>
 </div>
 

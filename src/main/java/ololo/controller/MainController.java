@@ -35,10 +35,10 @@ public class MainController {
     public ModelAndView signp(HttpServletRequest req) {
         ModelAndView c=new ModelAndView();
         if (new UserServiceImpl().getUser(req.getParameter("j_username"))!=null) {
-            c.setViewName("/signup");
+            c.setViewName("/logup");
         return c;
         }
-         new ForSQL().querySQL("Insert into users (email,pass) Values('"+req.getParameter("j_username")+"','"+req.getParameter("j_password")+"'");
+         new ForSQL().querySQL("Insert into users (email,pass) Values('"+req.getParameter("j_username")+"','"+req.getParameter("j_password")+"')");
         User us=new UserServiceImpl().getUser(req.getParameter("j_username"));
         authenticateUserAndSetSession(us, req);
         String b = "redirect:/";
